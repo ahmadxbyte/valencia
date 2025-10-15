@@ -230,7 +230,7 @@
     <!-- Footer -->
     <footer class="bg-primary py-5 ptb-10vh">
         <div class="container text-center">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center d-none d-md-flex">
                 <div class="col-md-2 col-6 mb-3 text-start">
                     <h6 class="fw-bold">HOME</h6>
                 </div>
@@ -294,7 +294,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="pt-5">
+            <hr class="pt-5 d-none d-md-block">
             <div class="text-center small">© 2025 Valencia Tour | All Rights Reserved</div>
         </div>
     </footer>
