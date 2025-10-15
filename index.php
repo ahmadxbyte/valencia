@@ -25,7 +25,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#home">Home T</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#destinasi">Destinasi</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#paket">Paket Wisata</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#layanan">Layanan & Jasa</a></li>
