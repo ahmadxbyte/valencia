@@ -6,17 +6,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 0 4vw;
 }
 
 .hero-section h1 {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin: 0 0 1rem;
 }
 
 .hero-section p {
     max-width: 600px;
     color: #f0f0f0;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    margin: 0 0 1.5rem;
 }
 
 .bg-primary {
@@ -27,27 +30,32 @@
     color: #ffe93b !important;
 }
 
-.ptb-20vh{
-    padding-top: 20vh !important;
-    padding-bottom: 20vh !important;
+.ptb-20vh {
+    padding-top: clamp(8vh, 8vw, 20vh) !important;
+    padding-bottom: clamp(8vh, 8vw, 20vh) !important;
 }
 
-.ptb-10vh{
-    padding-top: 10vh !important;
-    padding-bottom: 10vh !important;
+.ptb-10vh {
+    padding-top: clamp(4vh, 4vw, 10vh) !important;
+    padding-bottom: clamp(4vh, 4vw, 10vh) !important;
 }
 
 .h1 {
-    font-size: 40px;
+    font-size: clamp(28px, 6vw, 40px);
 }
 
 @media (max-width: 768px) {
     .hero-section {
         text-align: center;
         min-height: 60vh;
+        padding: 0 6vw;
     }
 
     .hero-section h1 {
-        font-size: 1.9rem;
+        font-size: clamp(1.6rem, 6vw, 1.9rem);
+    }
+
+    .hero-section p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
     }
 }

@@ -36,10 +36,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section text-white d-flex align-items-center">
-        <div class="container text-md-start position-absolute" style="left: 10vh; bottom: 20vh;">
+    <section id="home" class="hero-section text-white d-flex">
+        <div class="container">
             <h1 class="fw-bold">Jelajahi Nusantara Dengan <br> Valencia Mandiri Tour & Travel</h1>
-            <p class="mt-3" style="font-size: 20px;">Valencia Mandiri Tour & Travel merupakan perusahaan penyedia layanan perjalanan wisata yang berlokasi di Magelang, Jawa
+            <p class="mt-3">Valencia Mandiri Tour & Travel merupakan perusahaan penyedia layanan perjalanan wisata yang berlokasi di Magelang, Jawa
                 Tengah. Kami hadir untuk memberikan pengalaman wisata terbaik dengan pelayanan profesional, fasilitas lengkap, serta
                 berbagai pilihan destinasi menarik di seluruh Indonesia.</p>
         </div>
