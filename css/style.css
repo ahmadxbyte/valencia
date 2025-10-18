@@ -1,4 +1,8 @@
-.hero-section {
+body {
+    max-width: 100%;
+}
+
+/* .hero-section {
     min-height: 85vh;
     display: flex;
     align-items: center;
@@ -7,7 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 0 4vw;
-}
+} */
 
 .hero-section h1 {
     font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -48,16 +52,17 @@
 .highlight-box-right {
     background-color: #ffeb3b !important;
     /* kuning lembut */
-    border-radius: 20px;
-    width: 1000px;
+    border-radius: 20px 0 0 20px !important;
+    width: clamp(100px, 56vw, 1000px);
+    margin-left: auto;
 }
 
 /* Background box style */
 .highlight-box-left {
     background-color: #ffeb3b !important;
     /* kuning lembut */
-    border-radius: 20px;
-    width: 1000px;
+    border-radius: 0 20px 20px 0 !important;
+    width: clamp(100px, 56vw, 1000px);
     float: right;
 }
 

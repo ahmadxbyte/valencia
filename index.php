@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 </head>
 
 <body>
@@ -37,30 +41,92 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section text-white d-flex">
-        <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner hero-section">
+                <div class="carousel-item active">
+                    <img src="./img/img1.webp" class="d-block w-100" alt="..." style="height: 80vh !important; width: 100vw !important; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h1>Jelajahi Nusantara Dengan <br> Valencia Mandiri Tour & Travel</h1>
+                        <p>Valencia Mandiri Tour & Travel merupakan perusahaan penyedia layanan perjalanan wisata yang berlokasi di Magelang, Jawa
+                            Tengah. Kami hadir untuk memberikan pengalaman wisata terbaik dengan pelayanan profesional, fasilitas lengkap, serta
+                            berbagai pilihan destinasi menarik di seluruh Indonesia.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img2.webp" class="d-block w-100" alt="..." style="height: 80vh !important; width: 100vw !important; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h1>Jelajahi Nusantara Dengan <br> Valencia Mandiri Tour & Travel</h1>
+                        <p>Valencia Mandiri Tour & Travel merupakan perusahaan penyedia layanan perjalanan wisata yang berlokasi di Magelang, Jawa
+                            Tengah. Kami hadir untuk memberikan pengalaman wisata terbaik dengan pelayanan profesional, fasilitas lengkap, serta
+                            berbagai pilihan destinasi menarik di seluruh Indonesia.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img3.webp" class="d-block w-100" alt="..." style="height: 80vh !important; width: 100vw !important; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h1>Jelajahi Nusantara Dengan <br> Valencia Mandiri Tour & Travel</h1>
+                        <p>Valencia Mandiri Tour & Travel merupakan perusahaan penyedia layanan perjalanan wisata yang berlokasi di Magelang, Jawa
+                            Tengah. Kami hadir untuk memberikan pengalaman wisata terbaik dengan pelayanan profesional, fasilitas lengkap, serta
+                            berbagai pilihan destinasi menarik di seluruh Indonesia.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- <div class="container">
             <h1 class="fw-bold">Jelajahi Nusantara Dengan <br> Valencia Mandiri Tour & Travel</h1>
             <p class="mt-3">Valencia Mandiri Tour & Travel merupakan perusahaan penyedia layanan perjalanan wisata yang berlokasi di Magelang, Jawa
                 Tengah. Kami hadir untuk memberikan pengalaman wisata terbaik dengan pelayanan profesional, fasilitas lengkap, serta
                 berbagai pilihan destinasi menarik di seluruh Indonesia.</p>
-        </div>
+        </div> -->
     </section>
 
     <!-- Destinasi Populer -->
     <section id="destinasi" class="py-5 ptb-20vh">
         <div class="container">
             <h2 class="fw-bold pb-5" style="font-size: 36px;">Destinasi Populer</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="./img/img1.webp" class="img-fluid rounded mx-auto d-block" style="height: 30vh; width: auto; min-width: 100%; object-fit: cover;">
-                    <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR BALI</h6>
-                </div>
-                <div class="col-md-4">
-                    <img src="./img/img3.webp" class="img-fluid rounded mx-auto d-block" style="height: 30vh; width: auto; min-width: 100%; object-fit: cover;">
-                    <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR KARIMUN JAWA</h6>
-                </div>
-                <div class="col-md-4">
-                    <img src="./img/img2.webp" class="img-fluid rounded mx-auto d-block" style="height: 30vh; width: auto; min-width: 100%; object-fit: cover;">
-                    <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR BROMO</h6>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="./img/img1.webp" class="img-fluid rounded" style="height: 30vh; width:100%; object-fit:cover;">
+                        <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR BALI</h6>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/img3.webp" class="img-fluid rounded" style="height: 30vh; width:100%; object-fit:cover;">
+                        <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR KARIMUN JAWA</h6>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/img2.webp" class="img-fluid rounded" style="height: 30vh; width:100%; object-fit:cover;">
+                        <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR BROMO</h6>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/img4.webp" class="img-fluid rounded" style="height: 30vh; width:100%; object-fit:cover;">
+                        <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR BROMO X</h6>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/img5.webp" class="img-fluid rounded" style="height: 30vh; width:100%; object-fit:cover;">
+                        <h6 class="fw-bold mt-3" style="font-size: 16px;">WISATA TOUR BROMO XX</h6>
+                    </div>
+
+                    <!-- tambahkan slide lagi disini -->
                 </div>
             </div>
         </div>
