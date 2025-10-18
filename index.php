@@ -120,49 +120,66 @@
 
     <section id="perjalanan" class="py-5 ptb-20vh">
         <div class="container">
-            <h2 class="fw-bold mb-4 text-center pb-5">Mulai Perjalanan Spektakuler Anda dari sini</h2>
-            <div class="row pb-5">
-                <div class="col-md-5 col-12 m-auto">
-                    <img src="./img/img6.webp" class="img-fluid rounded mx-auto d-block" style="height: 50vh; width: auto; min-width: 100%; object-fit: cover;">
+            <h2 class="fw-bold mb-5 text-center">
+                Mulai Perjalanan Spektakuler Anda dari sini
+            </h2>
+
+            <!-- Perjalanan ke Bali -->
+            <div class="row align-items-center mb-5 flex-column-reverse flex-md-row">
+                <div class="col-md-5 col-12 mt-4 mt-md-0">
+                    <img
+                        src="./img/img6.webp"
+                        class="img-fluid rounded shadow mx-auto d-block"
+                        style="height: 50vh; width: 100%; object-fit: cover;" />
                 </div>
-                <div class="col-md-7 col-12 m-auto">
-                    <div class="h4" style="font-size: 36px;">Perjalanan Spektakuler ke Bali bersama kami.</div>
-                    <p style="font-size: 20px;">
-                        Highlight Perjalanan:
-                    <ul style="font-size: 20px;">
-                        <li>Perjalanan Magelang – Bali via ferry Ketapang–Gilimanuk</li>
-                        <li>Wisata Bedugul & Pura Ulun Danu Beratan</li>
-                        <li>Eksplor Tegalalang Rice Terrace & Pura Tirta Empul</li>
-                        <li>Jelajah Kintamani, Pantai Pandawa/Melasti, GWK, dan Uluwatu</li>
-                        <li>Menyaksikan Tari Kecak Sunset & makan malam di Jimbaran Beach</li>
-                        <li>Belanja & bersantai di Pantai Kuta / Beachwalk Kuta</li>
-                        <li>Kembali ke Magelang</li>
-                    </ul>
-                    </p>
+                <div class="col-md-7 col-12">
+                    <div class="highlight-box-right p-4 rounded-4 shadow-sm" style="height: 50vh;">
+                        <div class="h4 fw-bold mb-3" style="font-size: 28px;">
+                            Perjalanan Spektakuler ke Bali bersama kami.
+                        </div>
+                        <p style="font-size: 18px; margin-bottom: 6px;">Highlight Perjalanan:</p>
+                        <ul style="font-size: 18px; margin-left: 20px;">
+                            <li>Perjalanan Magelang – Bali via ferry Ketapang–Gilimanuk</li>
+                            <li>Wisata Bedugul & Pura Ulun Danu Beratan</li>
+                            <li>Eksplor Tegalalang Rice Terrace & Pura Tirta Empul</li>
+                            <li>Jelajah Kintamani, Pantai Pandawa/Melasti, GWK, dan Uluwatu</li>
+                            <li>Menyaksikan Tari Kecak Sunset & makan malam di Jimbaran Beach</li>
+                            <li>Belanja & bersantai di Pantai Kuta / Beachwalk Kuta</li>
+                            <li>Kembali ke Magelang</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="row pt-5">
-                <div class="col-md-7 col-12 m-auto">
-                    <div class="h4" style="font-size: 36px;">Perjalanan Spektakuler ke Bromo bersama kami.</div>
-                    <p style="font-size: 20px;">
-                        Highlight Perjalanan:
-                    <ul style="font-size: 20px;">
-                        <li>Perjalanan Magelang – Probolinggo</li>
-                        <li>Sunrise di Penanjakan 1 Gunung Bromo</li>
-                        <li>Jelajah Bukit Teletubbies, Padang Savana, dan Pasir Berbisik</li>
-                        <li>Kunjungan ke Kawah Bromo</li>
-                        <li>Eksplorasi Air Terjun Madakaripura</li>
-                        <li>Wisata santai & kuliner khas Probolinggo</li>
-                        <li>Kembali ke Magelang</li>
-                    </ul>
-                    </p>
+
+            <!-- Perjalanan ke Bromo -->
+            <div class="row align-items-center flex-column flex-md-row">
+                <div class="col-md-7 col-12 mb-4 mb-md-0">
+                    <div class="highlight-box-left p-4 rounded-4 shadow-sm" style="height: 50vh;">
+                        <div class="h4 fw-bold mb-3" style="font-size: 28px;">
+                            Perjalanan Spektakuler ke Bromo bersama kami.
+                        </div>
+                        <p style="font-size: 18px; margin-bottom: 6px;">Highlight Perjalanan:</p>
+                        <ul style="font-size: 18px; margin-left: 20px;">
+                            <li>Perjalanan Magelang – Probolinggo</li>
+                            <li>Sunrise di Penanjakan 1 Gunung Bromo</li>
+                            <li>Jelajah Bukit Teletubbies, Padang Savana, dan Pasir Berbisik</li>
+                            <li>Kunjungan ke Kawah Bromo</li>
+                            <li>Eksplorasi Air Terjun Madakaripura</li>
+                            <li>Wisata santai & kuliner khas Probolinggo</li>
+                            <li>Kembali ke Magelang</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-5 col-12 m-auto">
-                    <img src="./img/img7.webp" class="img-fluid rounded mx-auto d-block" style="height: 50vh; width: auto; min-width: 100%; object-fit: cover;">
+                <div class="col-md-5 col-12">
+                    <img
+                        src="./img/img7.webp"
+                        class="img-fluid rounded shadow mx-auto d-block"
+                        style="height: 50vh; width: 100%; object-fit: cover;" />
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Fasilitas -->
     <section id="layanan" class="py-5 ptb-20vh" style="background-color: #e7e7e7;">

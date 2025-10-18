@@ -44,6 +44,34 @@
     font-size: clamp(28px, 6vw, 40px);
 }
 
+/* Background box style */
+.highlight-box-right {
+    background-color: #ffeb3b !important;
+    /* kuning lembut */
+    border-radius: 20px;
+    width: 1000px;
+}
+
+/* Background box style */
+.highlight-box-left {
+    background-color: #ffeb3b !important;
+    /* kuning lembut */
+    border-radius: 20px;
+    width: 1000px;
+    float: right;
+}
+
+.highlight-box-left div,
+.highlight-box-left p,
+.highlight-box-left ul {
+    padding-left: 15vw;
+}
+
+/* Shadow lembut */
+.shadow-sm {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 768px) {
     .hero-section {
         text-align: center;
@@ -57,5 +85,47 @@
 
     .hero-section p {
         font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    .highlight-box-right {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .highlight-box-right .h4 {
+        font-size: 22px !important;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .highlight-box-right ul {
+        font-size: 16px !important;
+        padding-left: 0px;
+    }
+
+    .highlight-box-left {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .highlight-box-left .h4 {
+        font-size: 22px !important;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .highlight-box-left p {
+        font-size: 16px !important;
+        padding-left: 0px;
+    }
+
+    .highlight-box-left ul {
+        font-size: 16px !important;
+        padding-left: 0px;
+    }
+
+    img {
+        height: auto !important;
+        max-height: 300px;
     }
 }
