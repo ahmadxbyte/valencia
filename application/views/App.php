@@ -57,7 +57,7 @@
             foreach ($konten as $k) :
             ?>
                 <div class="col-lg-4 col-md-6 col-12 mb-4" onclick="paketWisataClick(<?= $k->id ?>)" style="cursor: pointer;">
-                    <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                    <div class="card h-100 shadow-sm rounded-4 overflow-hidden bg-primary">
                         <div class="d-md-none">
                             <img src="<?= base_url() ?>assets/img/<?= $k->image ?>"
                                 class="img-fluid w-100"
@@ -75,16 +75,16 @@
                                 <img src="<?= base_url() ?>assets/img/<?= $k->image ?>"
                                     class="img-fluid w-100"
                                     style="height: 30vh; min-height: 200px; object-fit: cover;">
-                                <div class="card-body bg-warning-subtle bg-primary p-4">
-                                    <h5 class="fw-bold" style="font-size: clamp(18px, 3vw, 24px);">PAKET <?= $k->title ?></h5>
-                                    <p class="mb-0" style="font-size: clamp(16px, 2.5vw, 20px);">
+                                <div class="card-body bg-primary p-4">
+                                    <h5 class="fw-bold" style="font-size: clamp(14px, 3vw, 18px);">PAKET <?= $k->title ?></h5>
+                                    <p class="mb-0" style="font-size: clamp(14px, 2vw, 16px);">
                                         <?= $k->note ?>
                                     </p>
                                 </div>
                             <?php else: ?>
-                                <div class="card-body bg-warning-subtle bg-primary p-4">
-                                    <h5 class="fw-bold" style="font-size: clamp(18px, 3vw, 24px);">PAKET <?= $k->title ?></h5>
-                                    <p class="mb-0" style="font-size: clamp(16px, 2.5vw, 20px);">
+                                <div class="card-body bg-primary p-4">
+                                    <h5 class="fw-bold" style="font-size: clamp(14px, 3vw, 18px);">PAKET <?= $k->title ?></h5>
+                                    <p class="mb-0" style="font-size: clamp(14px, 2vw, 16px);">
                                         <?= $k->note ?>
                                     </p>
                                 </div>
