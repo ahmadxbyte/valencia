@@ -13,6 +13,7 @@ class Destinasi extends CI_Controller
         $data = [
             'judul'     => 'Valencia Tour',
             'konten'    => $this->M_global->getDataTop('konten', 4),
+            'konten2'   => $this->M_global->getDataTop('konten', 2),
         ];
 
         $this->template->load('Template', 'Destinasi', $data);

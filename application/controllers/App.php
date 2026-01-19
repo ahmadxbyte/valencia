@@ -28,6 +28,7 @@ class App extends CI_Controller
         $data = [
             'judul'     => $konten->title,
             'konten'    => $konten,
+            'konten2'   => $this->M_global->getDataTop('konten', 2),
             'galeri'    => $galeri,
             'hari'      => $hari,
         ];

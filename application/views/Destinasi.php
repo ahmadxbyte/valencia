@@ -46,33 +46,31 @@
 </section>
 
 <!-- Kontak -->
-<section id="contact" class="py-5 ptb-20vh" style="background-color: #e7e7e7;">
+<section id="contact" class="py-5 ptb-20vh">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-12 m-auto">
-                <h2 class="fw-bold" style="font-size: 64px;">Mulai Perjalanan Anda Dengan Kami</h2>
-                <p class="pt-5 pb-5" style="font-size: 20px;">Hubungi Kontak Kami Dibawah Ini Untuk Memulai Perjalanan Spektakuler Anda</p>
-                <p>
-                <div class="contact-box d-inline-flex align-items-center p-3 rounded-3">
-                    <i class="fa-solid fa-envelope fa-2x me-3"></i>
-                    <div>
-                        <div class="text-muted">Email</div>
-                        <div class="fw-bold">myemail@gmail.com</div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 col-12 mb-5 mb-lg-0">
+                <h2 class="fw-bold text-center text-md-start" style="font-size: clamp(32px, 5vw, 64px);">Mulai Perjalanan Anda Dengan Kami</h2>
+                <p class="pt-5 pb-5 text-center text-md-start" style="font-size: clamp(16px, 2.5vw, 20px);">Hubungi Kontak Kami Dibawah Ini Untuk Memulai Perjalanan Spektakuler Anda</p>
+                <div class="d-flex flex-column flex-md-row gap-3">
+                    <div class="contact-box d-flex align-items-center p-3 rounded-3 w-100">
+                        <i class="fa-solid fa-envelope fa-2x me-3"></i>
+                        <div>
+                            <div class="text-muted">Email</div>
+                            <div class="fw-bold">myemail@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-box d-flex align-items-center p-3 rounded-3 w-100">
+                        <i class="fa-solid fa-phone fa-2x me-3"></i>
+                        <div>
+                            <div class="text-muted">Nomor Telepon</div>
+                            <div class="fw-bold">+62 877 6767 7678</div>
+                        </div>
                     </div>
                 </div>
-                </p>
-                <p>
-                <div class="contact-box d-inline-flex align-items-center p-3 rounded-3">
-                    <i class="fa-solid fa-phone fa-2x me-3"></i>
-                    <div>
-                        <div class="text-muted">Nomor Telepon</div>
-                        <div class="fw-bold">+62 877 6767 7678</div>
-                    </div>
-                </div>
-                </p>
             </div>
-            <div class="col-md-6 col-12 m-auto">
-                <img src="<?= base_url() ?>assets/img/img2.webp" class="img-fluid rounded mx-auto d-block" style="height: 50vh; width: auto; min-width: 100%; object-fit: cover;">
+            <div class="col-lg-6 col-md-12 col-12">
+                <img src="<?= base_url() ?>assets/img/img2.webp" class="img-fluid rounded mx-auto d-block w-100" style="height: 50vh; min-height: 300px; object-fit: cover;">
             </div>
         </div>
     </div>
