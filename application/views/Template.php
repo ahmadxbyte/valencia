@@ -75,14 +75,14 @@
                         <i class="fa-solid fa-envelope fa-2x me-3"></i>
                         <div>
                             <div class="text-muted">Email</div>
-                            <div class="fw-bold">myemail@gmail.com</div>
+                            <div class="fw-bold" style="font-size: 12px;">myemail@gmail.com</div>
                         </div>
                     </div>
                     <div class="contact-box d-inline-flex align-items-center p-3 rounded-3">
                         <i class="fa-solid fa-phone fa-2x me-3"></i>
                         <div>
                             <div class="text-muted">Nomor Telepon</div>
-                            <div class="fw-bold">+62 877 6767 7678</div>
+                            <div class="fw-bold" style="font-size: 12px;">+62 877 6767 7678</div>
                         </div>
                     </div>
                 </div>
