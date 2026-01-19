@@ -35,12 +35,12 @@
 <!-- Destinasi Populer -->
 <section id="destinasi" class="py-5 ptb-20vh">
     <div class="container">
-        <h2 class="fw-bold pb-5" style="font-size: 36px;">Destinasi Populer</h2>
+        <h2 class="fw-bold pb-5 text-center text-md-start" style="font-size: clamp(28px, 4vw, 36px);">Destinasi Populer</h2>
         <div class="row g-4">
             <?php foreach ($konten as $k) : ?>
-                <div class="col-md-4" style="cursor:pointer;" onclick="window.location.href='<?= site_url('App/konten/') . $k->id ?>'">
-                    <img src="<?= base_url() ?>assets/img/<?= $k->image ?>" class="img-fluid rounded mx-auto d-block" style="height: 30vh; width: auto; min-width: 100%; object-fit: cover;">
-                    <h6 class="fw-bold mt-3" style="font-size: 16px;"><?= strtoupper($k->title) ?></h6>
+                <div class="col-md-4 col-sm-6 col-12" style="cursor:pointer;" onclick="window.location.href='<?= site_url('App/konten/') . $k->id ?>'">
+                    <img src="<?= base_url() ?>assets/img/<?= $k->image ?>" class="img-fluid rounded mx-auto d-block w-100" style="height: 30vh; min-height: 250px; object-fit: cover;">
+                    <h6 class="fw-bold mt-3 text-center text-md-start" style="font-size: clamp(14px, 2vw, 16px);"><?= strtoupper($k->title) ?></h6>
                 </div>
             <?php endforeach ?>
         </div>
@@ -50,40 +50,49 @@
 <!-- Paket Wisata -->
 <section id="paket" class="py-5 ptb-20vh" style="background-color: #e7e7e7;">
     <div class="container">
-        <h2 class="fw-bold pb-5 text-center" style="font-size: 36px;">Paket Wisata</h2>
+        <h2 class="fw-bold pb-5 text-center" style="font-size: clamp(28px, 4vw, 36px);">Paket Wisata</h2>
         <div class="row g-4 align-items-stretch">
             <?php
             $i = 1;
             foreach ($konten as $k) :
             ?>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6 col-12 mb-4" onclick="paketWisataClick(<?= $k->id ?>)" style="cursor: pointer;">
                     <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
-                        <?php if ($i % 2 == 0): // jika genap, tampilkan image dulu 
-                        ?>
+                        <div class="d-md-none">
                             <img src="<?= base_url() ?>assets/img/<?= $k->image ?>"
-                                class="img-fluid mx-auto d-block"
-                                style="height: 40vh; width: auto; max-width: 100%; object-fit: cover;">
-
+                                class="img-fluid w-100"
+                                style="height: 30vh; min-height: 200px; object-fit: cover;">
                             <div class="card-body bg-warning-subtle bg-primary p-4">
-                                <h5 class="fw-bold" style="font-size: 24px;">PAKET <?= $k->title ?></h5>
-                                <p class="mb-0" style="font-size: 20px;">
+                                <h5 class="fw-bold text-center" style="font-size: clamp(18px, 3vw, 24px);">PAKET <?= $k->title ?></h5>
+                                <p class="mb-0 text-center" style="font-size: clamp(16px, 2.5vw, 20px);">
                                     <?= $k->note ?>
                                 </p>
                             </div>
+                        </div>
 
-                        <?php else: // jika ganjil, teks dulu 
-                        ?>
-                            <div class="card-body bg-warning-subtle bg-primary p-4">
-                                <h5 class="fw-bold" style="font-size: 24px;">PAKET <?= $k->title ?></h5>
-                                <p class="mb-0" style="font-size: 20px;">
-                                    <?= $k->note ?>
-                                </p>
-                            </div>
-
-                            <img src="<?= base_url() ?>assets/img/<?= $k->image ?>"
-                                class="img-fluid mx-auto d-block"
-                                style="height: 40vh; width: auto; max-width: 100%; object-fit: cover;">
-                        <?php endif; ?>
+                        <div class="d-none d-md-block">
+                            <?php if ($i % 2 == 0): ?>
+                                <img src="<?= base_url() ?>assets/img/<?= $k->image ?>"
+                                    class="img-fluid w-100"
+                                    style="height: 30vh; min-height: 200px; object-fit: cover;">
+                                <div class="card-body bg-warning-subtle bg-primary p-4">
+                                    <h5 class="fw-bold" style="font-size: clamp(18px, 3vw, 24px);">PAKET <?= $k->title ?></h5>
+                                    <p class="mb-0" style="font-size: clamp(16px, 2.5vw, 20px);">
+                                        <?= $k->note ?>
+                                    </p>
+                                </div>
+                            <?php else: ?>
+                                <div class="card-body bg-warning-subtle bg-primary p-4">
+                                    <h5 class="fw-bold" style="font-size: clamp(18px, 3vw, 24px);">PAKET <?= $k->title ?></h5>
+                                    <p class="mb-0" style="font-size: clamp(16px, 2.5vw, 20px);">
+                                        <?= $k->note ?>
+                                    </p>
+                                </div>
+                                <img src="<?= base_url() ?>assets/img/<?= $k->image ?>"
+                                    class="img-fluid w-100"
+                                    style="height: 30vh; min-height: 200px; object-fit: cover;">
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             <?php
@@ -96,22 +105,21 @@
 
 <section id="perjalanan" class="py-5 ptb-20vh">
     <div class="container">
-        <h2 class="fw-bold mb-4 text-center pb-5">Mulai Perjalanan Spektakuler Anda dari sini</h2>
+        <h2 class="fw-bold mb-4 text-center pb-5" style="font-size: clamp(24px, 4vw, 32px);">Mulai Perjalanan Spektakuler Anda dari sini</h2>
 
         <?php
         $i = 1;
         foreach ($konten2 as $k2) :
         ?>
-            <div class="row align-items-center mb-5 flex-column-reverse flex-md-row">
-                <?php if ($i % 2 == 0): // Jika genap, gambar di kanan 
-                ?>
-                    <div class="col-md-7 col-12 mb-4 mb-md-0">
-                        <div class="highlight-box-left p-4 rounded-4 shadow-sm" style="height: 50vh;">
-                            <div class="h4 fw-bold mb-3" style="font-size: 28px;">
+            <div class="row align-items-center mb-5">
+                <?php if ($i % 2 == 0): ?>
+                    <div class="col-md-7 col-12 mb-4 mb-md-0 order-2 order-md-1">
+                        <div class="highlight-box-left p-4 rounded-4 shadow-sm w-100" style="min-height: 40vh; height: auto;">
+                            <div class="h4 fw-bold mb-3 text-center text-md-start" style="font-size: clamp(20px, 3vw, 28px);">
                                 Perjalanan Spektakuler ke <?= $k2->title ?> bersama kami.
                             </div>
-                            <p style="font-size: 18px; margin-bottom: 6px;">Highlight Perjalanan:</p>
-                            <ul style="font-size: 18px; margin-left: 20px;">
+                            <p class="text-center text-md-start" style="font-size: clamp(16px, 2.5vw, 18px); margin-bottom: 6px;">Highlight Perjalanan:</p>
+                            <ul style="font-size: clamp(16px, 2.5vw, 18px); margin-left: 20px;">
                                 <?php
                                 $hari = $this->M_global->getDataResult('hari', ['konten_id' => $k2->id]);
                                 foreach ($hari as $h) :
@@ -122,27 +130,27 @@
                         </div>
                     </div>
 
-                    <div class="col-md-5 col-12">
+                    <div class="col-md-5 col-12 order-1 order-md-2 mb-4 mb-md-0">
                         <img
                             src="<?= base_url() ?>assets/img/<?= $k2->image ?>"
-                            class="img-fluid rounded shadow mx-auto d-block"
-                            style="height: 50vh; width: 100%; object-fit: cover;" />
+                            class="img-fluid rounded shadow mx-auto d-block w-100"
+                            style="height: 40vh; min-height: 300px; object-fit: cover;" />
                     </div>
                 <?php else: ?>
-                    <div class="col-md-5 col-12 mt-4 mt-md-0">
+                    <div class="col-md-5 col-12 mb-4 mb-md-0">
                         <img
                             src="<?= base_url() ?>assets/img/<?= $k2->image ?>"
-                            class="img-fluid rounded shadow mx-auto d-block"
-                            style="height: 50vh; width: 100%; object-fit: cover;" />
+                            class="img-fluid rounded shadow mx-auto d-block w-100"
+                            style="height: 40vh; min-height: 300px; object-fit: cover;" />
                     </div>
 
                     <div class="col-md-7 col-12">
-                        <div class="highlight-box-right p-4 rounded-4 shadow-sm" style="height: 50vh;">
-                            <div class="h4 fw-bold mb-3" style="font-size: 28px;">
+                        <div class="highlight-box-right p-4 rounded-4 shadow-sm w-100" style="min-height: 40vh; height: auto;">
+                            <div class="h4 fw-bold mb-3 text-center text-md-start" style="font-size: clamp(20px, 3vw, 28px);">
                                 Perjalanan Spektakuler ke <?= $k2->title ?> bersama kami.
                             </div>
-                            <p style="font-size: 18px; margin-bottom: 6px;">Highlight Perjalanan:</p>
-                            <ul style="font-size: 18px; margin-left: 20px;">
+                            <p class="text-center text-md-start" style="font-size: clamp(16px, 2.5vw, 18px); margin-bottom: 6px;">Highlight Perjalanan:</p>
+                            <ul style="font-size: clamp(16px, 2.5vw, 18px); margin-left: 20px;">
                                 <?php
                                 $hari = $this->M_global->getDataResult('hari', ['konten_id' => $k2->id]);
                                 foreach ($hari as $h) :
@@ -161,32 +169,25 @@
     </div>
 </section>
 
-
 <!-- Fasilitas -->
 <section id="layanan" class="py-5 ptb-20vh" style="background-color: #e7e7e7;">
     <div class="container">
-        <h2 class="fw-bold mb-4 pb-5 text-center" style="font-size: 36px;">Fasilitas Yang Kami Miliki</h2>
+        <h2 class="fw-bold mb-4 pb-5 text-center" style="font-size: clamp(28px, 4vw, 36px);">Fasilitas Yang Kami Miliki</h2>
         <div class="row g-4">
-            <div class="col-md-4">
-                <img src="<?= base_url() ?>assets/img/img7.webp" class="img-fluid rounded mx-auto d-block" style="height: 50vh; width: auto; min-width: 100%; object-fit: cover;">
-                <h6 class="fw-bold mt-3 pt-3 pb-3" style="font-size: 24px;">Tenaga Professional Tim Builing (Opsional)</h6>
-                <p style="font-size: 20px;">Tingkatkan kekompakan dan semangat kebersamaan selama perjalanan dengan fasilitator tim building profesional. Aktivitas
-                    seru dan interaktif ini dirancang untuk mempererat hubungan antar peserta melalui berbagai permainan dan kegiatan
-                    kolaboratif yang menyenangkan.</p>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <img src="<?= base_url() ?>assets/img/img7.webp" class="img-fluid rounded mx-auto d-block w-100" style="height: 40vh; min-height: 250px; object-fit: cover;">
+                <h6 class="fw-bold mt-3 pt-3 pb-3 text-center" style="font-size: clamp(18px, 3vw, 24px);">Tenaga Professional Tim Building (Opsional)</h6>
+                <p class="text-center text-md-start" style="font-size: clamp(16px, 2.5vw, 20px);">Tingkatkan kekompakan dan semangat kebersamaan selama perjalanan dengan fasilitator tim building profesional. Aktivitas seru dan interaktif ini dirancang untuk mempererat hubungan antar peserta.</p>
             </div>
-            <div class="col-md-4">
-                <img src="<?= base_url() ?>assets/img/img8.webp" class="img-fluid rounded mx-auto d-block" style="height: 50vh; width: auto; min-width: 100%; object-fit: cover;">
-                <h6 class="fw-bold mt-3 pt-3 pb-3" style="font-size: 24px;">Dokumentasi Wisata Lengkap (Foto & Video UHD, 4K, Drone, GoPro, Story/Reels)</h6>
-                <p style="font-size: 20px;">Abadikan setiap momen tak terlupakan dengan layanan dokumentasi profesional menggunakan peralatan modern berkualitas
-                    tinggi. Mulai dari foto UHD, video cinematic 4K, hingga pengambilan gambar dengan drone dan GoPro. Tim dokumentasi juga
-                    menyediakan hasil dalam format portrait untuk keperluan story atau reels media sosial, memastikan kenangan liburanmu
-                    terlihat spektakuler dari setiap sudut.</p>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <img src="<?= base_url() ?>assets/img/img8.webp" class="img-fluid rounded mx-auto d-block w-100" style="height: 40vh; min-height: 250px; object-fit: cover;">
+                <h6 class="fw-bold mt-3 pt-3 pb-3 text-center" style="font-size: clamp(18px, 3vw, 24px);">Dokumentasi Wisata Lengkap (Foto & Video UHD, 4K, Drone, GoPro, Story/Reels)</h6>
+                <p class="text-center text-md-start" style="font-size: clamp(16px, 2.5vw, 20px);">Abadikan setiap momen tak terlupakan dengan layanan dokumentasi profesional menggunakan peralatan modern berkualitas tinggi. Tim dokumentasi menyediakan hasil dalam format portrait untuk keperluan story atau reels media sosial.</p>
             </div>
-            <div class="col-md-4">
-                <img src="<?= base_url() ?>assets/img/img1.webp" class="img-fluid rounded mx-auto d-block" style="height: 50vh; width: auto; min-width: 100%; object-fit: cover;">
-                <h6 class="fw-bold mt-3 pt-3 pb-3" style="font-size: 24px;">Pertunjukan / Entertainment Musik</h6>
-                <p style="font-size: 20px;">Nikmati hiburan musik yang meriah di sela-sela perjalanan wisata. Suasana hangat dan menyenangkan akan tercipta berkat
-                    penampilan musik live yang membuat malam kebersamaan semakin berkesan dan penuh semangat.</p>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <img src="<?= base_url() ?>assets/img/img1.webp" class="img-fluid rounded mx-auto d-block w-100" style="height: 40vh; min-height: 250px; object-fit: cover;">
+                <h6 class="fw-bold mt-3 pt-3 pb-3 text-center" style="font-size: clamp(18px, 3vw, 24px);">Pertunjukan / Entertainment Musik</h6>
+                <p class="text-center text-md-start" style="font-size: clamp(16px, 2.5vw, 20px);">Nikmati hiburan musik yang meriah di sela-sela perjalanan wisata. Suasana hangat dan menyenangkan akan tercipta berkat penampilan musik live yang membuat malam kebersamaan semakin berkesan.</p>
             </div>
         </div>
     </div>
@@ -195,32 +196,37 @@
 <!-- Kontak -->
 <section id="contact" class="py-5 ptb-20vh">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-12 m-auto">
-                <h2 class="fw-bold" style="font-size: 64px;">Mulai Perjalanan Anda Dengan Kami</h2>
-                <p class="pt-5 pb-5" style="font-size: 20px;">Hubungi Kontak Kami Dibawah Ini Untuk Memulai Perjalanan Spektakuler Anda</p>
-                <p>
-                <div class="contact-box d-inline-flex align-items-center p-3 rounded-3">
-                    <i class="fa-solid fa-envelope fa-2x me-3"></i>
-                    <div>
-                        <div class="text-muted">Email</div>
-                        <div class="fw-bold">myemail@gmail.com</div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 col-12 mb-5 mb-lg-0">
+                <h2 class="fw-bold text-center text-md-start" style="font-size: clamp(32px, 5vw, 64px);">Mulai Perjalanan Anda Dengan Kami</h2>
+                <p class="pt-5 pb-5 text-center text-md-start" style="font-size: clamp(16px, 2.5vw, 20px);">Hubungi Kontak Kami Dibawah Ini Untuk Memulai Perjalanan Spektakuler Anda</p>
+                <div class="d-flex flex-column flex-md-row gap-3">
+                    <div class="contact-box d-flex align-items-center p-3 rounded-3 w-100">
+                        <i class="fa-solid fa-envelope fa-2x me-3"></i>
+                        <div>
+                            <div class="text-muted">Email</div>
+                            <div class="fw-bold">myemail@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-box d-flex align-items-center p-3 rounded-3 w-100">
+                        <i class="fa-solid fa-phone fa-2x me-3"></i>
+                        <div>
+                            <div class="text-muted">Nomor Telepon</div>
+                            <div class="fw-bold">+62 877 6767 7678</div>
+                        </div>
                     </div>
                 </div>
-                </p>
-                <p>
-                <div class="contact-box d-inline-flex align-items-center p-3 rounded-3">
-                    <i class="fa-solid fa-phone fa-2x me-3"></i>
-                    <div>
-                        <div class="text-muted">Nomor Telepon</div>
-                        <div class="fw-bold">+62 877 6767 7678</div>
-                    </div>
-                </div>
-                </p>
             </div>
-            <div class="col-md-6 col-12 m-auto">
-                <img src="<?= base_url() ?>assets/img/img2.webp" class="img-fluid rounded mx-auto d-block" style="height: 50vh; width: auto; min-width: 100%; object-fit: cover;">
+            <div class="col-lg-6 col-md-12 col-12">
+                <img src="<?= base_url() ?>assets/img/img2.webp" class="img-fluid rounded mx-auto d-block w-100" style="height: 50vh; min-height: 300px; object-fit: cover;">
             </div>
         </div>
     </div>
 </section>
+
+
+<script>
+    function paketWisataClick(id) {
+        window.location.href = '<?= site_url('App/konten/') ?>' + id;
+    }
+</script>

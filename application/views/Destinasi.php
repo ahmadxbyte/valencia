@@ -20,9 +20,9 @@
             <div class="card-body" style="background-color: #e7e7e7;">
                 <div class="row">
                     <?php foreach ($konten as $k) : ?>
-                        <div class="col-md-3 col-12">
+                        <div class="col-md-3 col-12 mb-3">
                             <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
-                                <img src="<?= base_url() ?>assets/img/<?= $k->image ?>"
+                                <img src="<?= base_url('assets/img/') . $k->image ?>"
                                     class="img-fluid mx-auto d-block"
                                     style="height: 40vh; width: auto; max-width: 100%; object-fit: cover;">
 
