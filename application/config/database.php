@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost', //'kampar.rumahweb.com',
-	'username' => 'root', //'valk7719_admin',
-	'password' => '', //'valk7719_admin',
+	'hostname' => 'kampar.rumahweb.com', //'kampar.rumahweb.com',
+	'username' => 'valk7719_admin', //'valk7719_admin',
+	'password' => 'valk7719_admin', //'valk7719_admin',
 	'database' => 'valk7719_valensia',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
